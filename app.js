@@ -3,8 +3,6 @@ const path = require("path");
 const app = express();
 const hbs = require('hbs');
 const mongoose = require('mongoose');
-// const { result } = require('lodash');
-// const axios = require('axios');
 const lender = require('./src/models/lender.js');
 const userModel = require('./src/models/userModel.js');
 
@@ -14,6 +12,7 @@ const port = process.env.PORT || 3000;
 const staticpath = path.join(__dirname, "./public");
 const templatepath = path.join(__dirname, "./src/templates/views");
 const partialpath = path.join(__dirname, "./src/templates/partials");
+
 // middleware
 app.use('/css', express.static(path.join(__dirname, "../node_modules/bootstrap/dist/css")));
 app.use('/js', express.static(path.join(__dirname, "../node_modules/bootstrap/dist/js")));
@@ -47,60 +46,18 @@ app.get('/consumer/:category&:product', async (req,res)=>{
     console.log(requestedCategory1);
     const test1 = await lender.find({product: requestedCategory1});
     const test2 = await lender.find({category: requestedCategory2, product:{$ne: requestedCategory1}});
-    // while(test !== null){
-    //     dataarr[i] = test;
-    //     const test = await lender.findone({category: requestedCategory});
-    //     i++;
-    // }
-    // console.log(test1);
-    // console.log(test2);
     if(test1.length=== 0 && test2.length === 0){
         res.send("Nothing to show");
     }
     else{
-        // ((err,len)=>{
-        //     res.render("temp",{
-        //         prod: len.product,
-        //         cate: len.category
-        //         // maxtime: req.body.age
-        //     });
-        // });
         res.render("amazon",{
-            // prod: test.product,
-            // // cate: test.category,
-            // dayss: test.maxrentTime,
-            // rate: test.perDay
-            // // maxtime: req.body.age
-            // udata: [{
-            //     product: test[0].product,
-            //     maxrentTime: test[0].maxrentTime,
-            //     perDay: test[0].perDay
-            // }]
             udata: test1,
             odata: test2
         });
-        // res.render("amazon");
     }
-    // , (err,len)=>{
-    //     res.render("temp",{
-    //         prod: len.product,
-    //         cate: len.category
-    //         // maxtime: req.body.age
-    //     });
-    // });
-    // res.render('temp',{
-    //     prod: "bat",
-    //     cate: "sports",
-    //     maxtime: "2.4"
-    // });
 })
 
 app.post('/consumer', async(req,res)=>{
-    // lender.find().then((result)=>{
-    //     module.exports = result;
-	// }).catch((err) =>{
-	// 	console.log(err);
-	// })
     try{
         const userData = new userModel(req.body);
         await userData.save();
