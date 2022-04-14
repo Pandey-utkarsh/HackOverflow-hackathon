@@ -10,16 +10,7 @@ body{
   background-color: #f59b5c;
   padding: 30px;
   border-radius: 10px;
-  border: none;
-  box-shadow: inset 0 0 0 0 #3c843d;
-  outline: none;
-  transition: ease-out 0.3s;
-  text-align: centre;
 }
-.button:hover {
-    box-shadow: inset 100% 0 0 0 0 #3c843d;
-}
-
 .button a{
   color: white;
   text-decoration: none;
