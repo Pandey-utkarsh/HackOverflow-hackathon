@@ -16,9 +16,17 @@
   </head>
   <body>
     <div class="object-basic-data">
-      <div class="title">Hey lender!<br>Please fill the following details of your item</div>
+      <div class="title">Hey lender!<br>Please fill the following details</div>
         <form action="/lender" method="POST">
           <div class="object-details">
+            <div class="input-box">
+              <span class="details">Name</span>
+              <input type="text" placeholder="Enter Your name"required name="name">
+            </div>
+            <div class="input-box">
+              <span class="details">E-mail ID</span>
+              <input type="mail" placeholder="Enter your email ID"required name="email">
+            </div>
             <div class="input-box">
               <span class="details">Type</span>
               <input type="text" placeholder="Enter the type"required name="product">
@@ -36,16 +44,16 @@
               </select>
             </div>
             <div class="input-box">
-              <span class="details">Age</span>
-              <input type="text" placeholder="Enter the age of the object"required name="age">
+              <span class="details">Item's Age</span>
+              <input type="text" placeholder="How old is your object"required name="age">
             </div>
             <div class="input-box">
               <span class="details">Days</span>
               <input type="text" placeholder="Maximum No. of days you can lend"required name="maxrentTime">
             </div>
             <div class="input-box">
-              <span class="details">Address</span>
-              <input class="location" type="text" placeholder="Enter your location"required name="Address">
+              <span class="details">Location</span>
+              <input class="location" type="text" placeholder="Enter your address"required name="Address">
               <input class="city" type="text" placeholder="City"required name="City">
               <select name="state" id="state" name="State">
               <option value="Andhra Pradesh">Andhra Pradesh</option>

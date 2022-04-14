@@ -21,34 +21,37 @@
     <div class="type">
       <p>{{this.product}}</p>
     </div>
-    <div class="status">
+    {{!-- <div class="status">
       <p>Status: </p>
-    </div>
+    </div> --}}
     <div class="max">
       <p> Availability(in days): {{this.maxrentTime}}</p>
     </div>
     <div class="rate">
       <p>Rent(per day): {{this.perDay}}</p>
     </div>
-    <a class="fcc-btn" href="/consumer/thankyou">Notify Lender</a>
-  </div>
+    <a class="fcc-btn" href="mailto:{{this.email}}?subject=Congratulation!%20Someone%20wants%20to%20borrow%20your%20item.&body=Hello%20{{this.name}}!%20Your%20item%20is%20someone's%20urgent%20need.%20You%20may%20reply%20back%20to%20this%20mail%20to%20confirm%20your%20consent%20and%20carry%20forward%20this%20deal.%0D%0AAddress%20of%20borrower:%20{{this.Address}}%20%20{{this.City}}%20%20{{this.State}}.%0D%0AThanks%20and%20Regards.">Notify Lender</a>
+    </div>
   {{/each}}
+  <hr style="height:2px;border-width:0;color:gray;background-color:rgb(169, 57, 57)">
   <p>Other products in this category are:</p>
   {{#each odata}}
   <div class="pallete">
     <div class="type">
       <p>{{this.product}}</p>
     </div>
-    <div class="status">
+    {{!-- <div class="status">
       <p>Status: </p>
-    </div>
+    </div> --}}
     <div class="max">
       <p> Availability(in days): {{this.maxrentTime}}</p>
     </div>
     <div class="rate">
       <p>Rent(per day): {{this.perDay}}</p>
     </div>
-        <a class="fcc-btn" href="/consumer/thankyou">Notify Lender</a>
-  </div>
+    <a class="fcc-btn" href="mailto:{{this.email}}?subject=Congratulation!%20Someone%20wants%20to%20borrow%20your%20item.&body=Hello%20{{this.name}}!20Your%20item%20is%20someone's%20urgent%20need.%20You%20may%20reply%20back%20to%20this%20mail%20to%20confirm%20your%20consent%20and%20carry%20forward%20this%20deal.%0D%0AAddress%20of%20borrower:%20{{this.Address}}%20%20{{this.City}}%20%20{{this.State}}.%0D%0AThanks%20and%20Regards.">Notify Lender</a>
+    </div>
   {{/each}}
-</body
+  <a class="fcc-btn1" href="/consumer/thankyou">Done</a>
+</body>
+</html>

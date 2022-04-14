@@ -52,8 +52,8 @@ app.get('/consumer/:category&:product', async (req,res)=>{
     //     const test = await lender.findone({category: requestedCategory});
     //     i++;
     // }
-    console.log(test1);
-    console.log(test2);
+    // console.log(test1);
+    // console.log(test2);
     if(test1.length=== 0 && test2.length === 0){
         res.send("Nothing to show");
     }

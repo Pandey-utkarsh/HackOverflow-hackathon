@@ -11,7 +11,8 @@ html,body {
     background: linear-gradient(135deg, #D6ED17FF, #606060FF);
     padding: 100px 30px;
     text-align: center;
-    background: linear-gradient(135deg, #D6ED17FF, #606060FF); url(https://codexcourier.com/images/main_page.jpg) center/cover no-repeat;
+    background: linear-gradient(135deg, #D6ED17FF, #606060FF); 
+    /* url(https://codexcourier.com/images/main_page.jpg) center/cover no-repeat; */
 }
 .thankyou-page ._header .logo {
     max-width: 200px;
