@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>amazon</title>
+  <meta name="author" content="Shashank Kumar,Utkarsh Pndey & Ashish kumar">
+  <meta name="description" content="Here you can lend and borrow any thing having a price under 10,000.">
+  <link rel="stylesheet" href="/css/amazon.css">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@200&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  {{#each udata}}
+  <div class="pallete">
+    <div class="type">
+      <p>{{this.product}}</p>
+    </div>
+    <div class="status">
+      <p>Status: </p>
+    </div>
+    <div class="max">
+      <p> Availability(in days): {{this.maxrentTime}}</p>
+    </div>
+    <div class="rate">
+      <p>Rent(per day): {{this.perDay}}</p>
+    </div>
+    <div class="notify">
+      <input type="button" name="button" value="Notify Lender">
+    </div>
+  </div>
+  {{/each}}
+  <p>Other products in this category are:</p>
+  {{#each odata}}
+  <div class="pallete">
+    <div class="type">
+      <p>{{this.product}}</p>
+    </div>
+    <div class="status">
+      <p>Status: </p>
+    </div>
+    <div class="max">
+      <p> Availability(in days): {{this.maxrentTime}}</p>
+    </div>
+    <div class="rate">
+      <p>Rent(per day): {{this.perDay}}</p>
+    </div>
+    <div class="notify">
+      <input type="button" name="button" value="Notify Lender">
+    </div>
+  </div>
+  {{/each}}
+</body

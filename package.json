@@ -1,0 +1,19 @@
+{
+  "name": "hackoverflow-hackathon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.1.3",
+    "express": "^4.17.3",
+    "hbs": "^4.2.0",
+    "jquery": "^3.6.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.2.10"
+  }
+}

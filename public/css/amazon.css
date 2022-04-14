@@ -1,0 +1,47 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+body{
+  background: linear-gradient(135deg, #D6ED17FF, #606060FF);
+}
+
+.pallete{
+  width: 70%;
+  background-color: #606060FF;
+  border: solid;
+  border-color: black;
+  border-radius: 5px;
+  margin: 40px 15px 15px 45px;
+  padding: 10px;
+  color: white;
+}
+.status{
+  min-width: 10px;
+  text-align: left;
+  background-color: orange;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 2px;
+  display: inline-block;
+  float: right;
+  left: 20px;
+}
+.type{
+  display:inline-block;
+  margin: 2px;
+}
+
+.notify{
+  margin:2px;
+}
+.notify input{
+  width: 70px;
+  margin:2px;
+  padding: 5px 40px 5px 40px;
+  background-color: Green;
+  font-weight: 800;
+  border-radius: 6px;
+  font-family: 'Poppins', sans-serif;
+}

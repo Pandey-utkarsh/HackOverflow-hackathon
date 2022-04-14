@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',snas-serif;
+}
+
+body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #D6ED17FF, #606060FF);
+  padding: 10px;
+
+}
+h3{
+  font-weight: 600;
+}
+.title{
+  text-align: center;
+}
+.consumer-basic-data{
+  max-width: 700px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 20px;
+  background:#fff
+}
+
+.consumer-basic-data .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.consumer-basic-data form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form .user-details .input-box{
+  margin: 15px 0 15px 0;
+  width: calc(100%/2 - 20px);
+}
+
+.user-details .input-box .details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #606060FF;
+}
+
+
+
+.user-details .input-box select{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box select:focus,
+.user-details .input-box select:valid{
+  border-color: #606060FF;
+
+}
+form .button input{
+  height: 100%;
+  min-height: 30px;
+  width: 50%;
+  outline: none;
+  color: #fff;
+  border: none;
+  text-align: center; /* not working from here so use dbelow this*/
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  font-size: 18px;
+  background: linear-gradient(135deg, #D6ED17FF, #606060FF);
+}
+.button{
+  text-align: center;
+ }
+
+form .button input:hover{
+    background: linear-gradient(-135deg, #D6ED17FF, #606060FF);
+}
+
+@media (max-width584px) {
+  .consumer-basic-info{
+    max-width: 100%
+  }
+  form .user-details .input-box{
+    margin-bottom: 15px;
+    width:100%;
+  }
+  .consumer-basic-data form .user-details{
+    max-height:100%;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar{
+    width: 0;
+  }
+}

@@ -1,0 +1,133 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',snas-serif;
+}
+
+body{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #D6ED17FF, #606060FF);
+  padding: 10px;
+
+}
+.title{
+  text-align: center;
+}
+
+.object-basic-data{
+  max-width: 700px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 20px;
+  background:#fff
+}
+
+.object-basic-data .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.object-basic-data form .object-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+form .object-details .input-box{
+  margin: 20px 0 20px 0;
+  width: calc(100%/2 - 20px);
+}
+
+.object-details .input-box .details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.object-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+/* .object-details .input-box .location{
+  width: 150%;
+  margin-right: 200px;
+}
+.object-details .input-box .city{
+  display: inline;
+}
+.object-details .input-box .state{
+  /* width: 150%; */
+  /* margin: 5px 0 5px 0;
+} */
+
+.object-details .input-box input:focus,
+.object-details .input-box input:valid{
+  border-color: #606060FF;
+}
+
+.object-details .input-box select{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding-left: 15px;
+  font-size: 16px;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.object-details .input-box select:focus,
+.object-details .input-box select:valid{
+  border-color: #606060FF;
+}
+
+form .button input{
+  height: 100%;
+  min-height: 30px;
+  width: 50%;
+  outline: none;
+  color: #fff;
+  border: none;
+  text-align: center; /* not working from here so use dbelow this*/
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  font-size: 18px;
+  background: linear-gradient(135deg, #D6ED17FF, #606060FF);
+}
+.button{
+  text-align: center;
+ }
+
+form .button input:hover{
+    background: linear-gradient(-135deg, #D6ED17FF, #606060FF);
+}
+
+@media (max-width584px) {
+  .consumer-basic-info{
+    max-width: 100%
+  }
+  form .object-details .input-box{
+    margin-bottom: 15px;
+    width:100%;
+  }
+  .consumer-basic-data form .object-details{
+    max-height:100%;
+    overflow-y: scroll;
+  }
+  .object-details::-webkit-scrollbar{
+    width: 0;
+  }
+}
