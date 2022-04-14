@@ -117,74 +117,15 @@ app.post('/lender', async(req,res)=>{
     try{
         const lenderData = new lender(req.body);
         await lenderData.save();
-        res.status(201).render("lender");
+        res.status(201).render("thankyoulender");
     } catch(error){
         res.status(500).send(error);
     }
 })
 
-// app.get('/all-lenders',(req,res)=>{
-// 	lender.find().then((result)=>{
-// 		res.send(result);
-// 	}).catch((err) =>{
-// 		console.log(err);
-// 	})
-// })
-
-// app.get('/test', (req,res)=>{
-//     res.send('All looks good');
-// })
-
-// app.get('/lenders', async(req,res)=>{
-//     const lenders = await lender.find({});
-//     res.json({
-//         status: 'success',
-//         data: lenders
-//     })
-// })
-// app.get('/users', async(req,res)=>{
-//     const users= await userModel.find({});
-//     res.json({
-//         status: 'success',
-//         data: users
-//     })
-// })
-// app.post('/lender', async (req,res)=>{
-//     const newLender = await lender.create(req.body.lender);
-//     res.json({
-//         message: 'Succesfully created new lender',
-//         data: newLender
-//     })
-// })
-// app.post('/user', async (req,res)=>{
-//     const newUser = await userModel.create(req.body.user);
-//     res.json({
-//         message: 'Succesfully created new user',
-//         data: newUser
-//     })
-// })
-
-// app.delete('/users/:id', async(req,res)=>{
-//     await userModel.findByIdAndDelete(req.params.id);
-//     res.json({
-//         message: 'User deleted'
-//     })
-// })
-
-// Send a POST request
-// addToDatabase(()=>{
-//     axios({
-//         method: 'post',
-//         url: 'localhost:5500/user',
-//         data: {
-//         //   firstName: 'Fred',
-//         //   lastName: 'Flintstone'
-//             product: x,
-//             Address: y
-//         }
-//       });
-// })
-
+app.get('/consumer/thankyou',(req,res)=>{
+    res.render('thankyouuser');
+})
 mongoose.connect('mongodb://Hackathon:hack1234@cluster0-shard-00-00.kzlum.mongodb.net:27017,cluster0-shard-00-01.kzlum.mongodb.net:27017,cluster0-shard-00-02.kzlum.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-e42hkd-shard-0&authSource=admin&retryWrites=true&w=majority',{
     useNewUrlParser: true,
     useUnifiedTopology: true
