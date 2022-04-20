@@ -17,7 +17,7 @@ body{
   padding: 10px;
   color: white;
 }
-.status{
+/* .status{
   min-width: 10px;
   text-align: left;
   background-color: orange;
@@ -27,7 +27,7 @@ body{
   display: inline-block;
   float: right;
   left: 20px;
-}
+} */
 .type{
   display:inline-block;
   margin: 2px;

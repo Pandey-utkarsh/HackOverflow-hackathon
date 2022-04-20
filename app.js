@@ -44,19 +44,19 @@ app.get('/consumer/:category&:product', async (req,res)=>{
     const requestedCategory1 = req.params.product;
     const requestedCategory2 = req.params.category;
     console.log(requestedCategory1);
+    console.log(requestedCategory2);
     const test1 = await lender.find({product: requestedCategory1});
     const test2 = await lender.find({category: requestedCategory2, product:{$ne: requestedCategory1}});
     if(test1.length=== 0 && test2.length === 0){
         res.send("Nothing to show");
     }
-    else{
+    else{            
         res.render("amazon",{
             udata: test1,
-            odata: test2
+            odata: test2,
         });
     }
-})
-
+});
 app.post('/consumer', async(req,res)=>{
     try{
         const userData = new userModel(req.body);
@@ -64,7 +64,10 @@ app.post('/consumer', async(req,res)=>{
         console.log(userData.category);
         res.status(201).render("page", {
             categ: userData.category,
-            prod: userData.product
+            prod: userData.product,
+            // Addr: userData.Address,
+            // Cit: userData.City,
+            // Stat: userData.State
         });
     } catch(error){
         res.status(500).send(error);
